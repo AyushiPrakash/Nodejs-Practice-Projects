@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello</h1>
-    <p>This is a demo page</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info</title>
+  </head>
+  <style>
+      body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lavender;
+        }
+
+        .container{
+            margin-top: 4rem;
+        }
+
+        .heading{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+            text-align: center;
+
+        }
+
+        .box{
+            width: 12rem;
+            height: 2.5rem;
+            border-radius: 12px;
+            margin:4px 8px 12px 8px;
+            text-align: center;
+            outline: none;
+            border: none;
+        }
+
+        .button{
+            width: 6rem;
+            height: 2rem;
+            border-radius: 4rem;
+            outline: none;
+            border: rebeccapurple 2px solid;
+        }
+  </style>
+  <body>
+      <div class="container">
+        <h1 class="heading">Add a New User</h1>
+        <form action="/addUser" method="POST">
+        <input class="box" type="text" name="firstName" placeholder="First Name" />
+        <input class="box" type="text" name="lastName" placeholder="Last Name" />
+        <input class="box" type="text" name="regNumber" placeholder="Registration Number" />
+        <input class="button" type="submit" value="Add" />
+        </form>
+
+        <h1 class="heading">Update a User</h1>
+        <form action="/updateUser" method="POST">
+        <input class="box" type="text" name="firstName" placeholder="First Name" />
+        <input class="box" type="text" name="lastName" placeholder="Last Name" />
+        <input class="box" type="text" name="regNumber" placeholder="Registration Number" />
+        <br />
+        <input class="box" type="text" name="newFirstName" placeholder="New First Name" />
+        <input class="box" type="text" name="newLastName" placeholder="New Last Name" />
+        <input class="box" type="text" name="newRegNumber" placeholder="New Registration Number" />
+        <input class="button" type="submit" value="Update" />
+        </form>
+
+        <h1 class="heading">Delete a User</h1>
+        <form action="/deleteUser" method="POST">
+        <input class="box" type="text" name="firstName" placeholder="First Name" />
+        <input class="box" type="text" name="lastName" placeholder="Last Name" />
+        <input class="box" type="text" name="regNumber" placeholder="Registration Number" />
+        <input class="button" type="submit" value="Delete" />
+        </form>
+
+    
+      </div>
+    
+  </body>
 </html>
